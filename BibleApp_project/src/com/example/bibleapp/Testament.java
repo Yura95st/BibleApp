@@ -4,9 +4,9 @@ public class Testament {
 
 	private int number;
 	private String title;
-	private Partision[] partisions;
+	private Book[] partisions;
 
-	public Testament(int number, String title, Partision[] partisions) {
+	public Testament(int number, String title, Book[] partisions) {
 		super();
 		this.number = number;
 		this.title = title;
@@ -29,11 +29,11 @@ public class Testament {
 		this.title = title;
 	}
 
-	public Partision[] getPartisions() {
+	public Book[] getPartisions() {
 		return partisions;
 	}
 
-	public void setPartisions(Partision[] partisions) {
+	public void setPartisions(Book[] partisions) {
 		this.partisions = partisions;
 	}
 

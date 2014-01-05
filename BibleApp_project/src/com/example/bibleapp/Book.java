@@ -1,12 +1,12 @@
 package com.example.bibleapp;
 
-public class Partision {
+public class Book {
 
 	private int nubmer;
 	private String title;
 	private Chapter[] chapters;
 
-	public Partision(int nubmer, String title, Chapter[] chapters) {
+	public Book(int nubmer, String title, Chapter[] chapters) {
 		super();
 		this.nubmer = nubmer;
 		this.title = title;

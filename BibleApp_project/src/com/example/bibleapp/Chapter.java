@@ -1,32 +1,22 @@
 package com.example.bibleapp;
 
 public class Chapter {
-
-	private int number;
-	private String title;
+	
+	private int nubmer;
 	private Verse[] verses;
-
-	public Chapter(int number, String title, Verse[] verses) {
+	
+	public Chapter(int nubmer, Verse[] verses) {
 		super();
-		this.number = number;
-		this.title = title;
+		this.nubmer = nubmer;
 		this.verses = verses;
 	}
 
-	public int getNumber() {
-		return number;
+	public int getNubmer() {
+		return nubmer;
 	}
 
-	public void setNumber(int number) {
-		this.number = number;
-	}
-
-	public String getTitle() {
-		return title;
-	}
-
-	public void setTitle(String title) {
-		this.title = title;
+	public void setNubmer(int nubmer) {
+		this.nubmer = nubmer;
 	}
 
 	public Verse[] getVerses() {

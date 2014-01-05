@@ -10,6 +10,8 @@ import android.widget.TableRow;
 import android.widget.TextView;
 
 public class StartActivity extends Activity {
+	
+	public final static String EXTRA_TESTAMENT = "com.example.bibleapp.TESTAMENT";
 
 	private Button oldTestamentButton;
 	private Button newTestamentButton;
@@ -35,7 +37,7 @@ public class StartActivity extends Activity {
 		settingsButton.setOnClickListener(startButtonsListener);
 	}
 
-	public OnClickListener startButtonsListener = new OnClickListener() {
+	private OnClickListener startButtonsListener = new OnClickListener() {
 
 		Intent intent;
 
@@ -43,28 +45,30 @@ public class StartActivity extends Activity {
 			switch (v.getId()) {
 			case R.id.oldTestamentButton:
 				intent = new Intent(StartActivity.this,
-						PartisionActivity.class);
+						TestamentActivity.class);
+				intent.putExtra(EXTRA_TESTAMENT, "old");
 				break;
 
 			case R.id.newTestamentButton:
 				intent = new Intent(StartActivity.this,
-						PartisionActivity.class);
+						TestamentActivity.class);
+				intent.putExtra(EXTRA_TESTAMENT, "new");
 				break;
 
-			case R.id.specialVersesButton:
-				intent = new Intent(StartActivity.this,
-						SpecialVersesActivity.class);
-				break;
-
-			case R.id.bookmarksButton:
-				intent = new Intent(StartActivity.this,
-						BookmarksActivity.class);
-				break;
-
-			case R.id.settingsButton:
-				intent = new Intent(StartActivity.this,
-						SettingsActivity.class);
-				break;
+//			case R.id.specialVersesButton:
+//				intent = new Intent(StartActivity.this,
+//						SpecialVersesActivity.class);
+//				break;
+//
+//			case R.id.bookmarksButton:
+//				intent = new Intent(StartActivity.this,
+//						BookmarksActivity.class);
+//				break;
+//
+//			case R.id.settingsButton:
+//				intent = new Intent(StartActivity.this,
+//						SettingsActivity.class);
+//				break;
 			}
 
 			startActivity(intent);

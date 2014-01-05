@@ -1,10 +1,10 @@
 package com.example.bibleapp;
 
 public class Verse {
-
+	
 	private int number;
 	private String text;
-
+	
 	public Verse(int number, String text) {
 		super();
 		this.number = number;
@@ -26,4 +26,5 @@ public class Verse {
 	public void setText(String text) {
 		this.text = text;
 	}
+	
 }

@@ -3,6 +3,10 @@
 
     <string name="app_name">BibleApp</string>
     <string name="action_settings">Settings</string>
-    <string name="hello_world">Hello world!</string>
+    <string name="old_testament_button">Old Testament</string>
+    <string name="new_testament_button">New Testament</string>
+    <string name="special_verser_button">Special verses</string>
+    <string name="bookmarks_button">Bookmarks</string>
+    <string name="settings_button">Settings</string>
 
 </resources>
