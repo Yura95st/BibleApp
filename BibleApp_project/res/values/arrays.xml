@@ -1,0 +1,8 @@
+<resources>
+
+    <string-array name="books_old_testament">
+        <item></item>
+    </string-array>
+    <string-array name="books_new_testament"></string-array>
+
+</resources>
