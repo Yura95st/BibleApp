@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bible>
+	<book>
+		<number>1</number>
+		<chapters>
+			<chapter>
+				<number>1</number>
+				<verses>
+					<verse>
+						<number>1</number>
+
+						<text>1_1_At the first God made the heaven and the earth.</text>
+					</verse>
+					<verse>
+						<number>2</number>
+
+						<text>1_1_At the first God made the heaven and the earth.</text>
+					</verse>
+					<verse>
+						<number>3</number>
+
+						<text>1_1_At the first God made the heaven and the earth.</text>
+					</verse>
+				</verses>
+			</chapter>
+			<chapter>
+				<number>2</number>
+				<verses>
+					<verse>
+						<number>1</number>
+
+						<text>1_1_At the first God made the heaven and the earth.</text>
+					</verse>
+				</verses>
+			</chapter>
+		</chapters>
+	</book>
+	<book>
+		<number>2</number>
+		<chapters>
+			<chapter>
+				<number>1</number>
+				<verses>
+					<verse>
+						<number>1</number>
+
+						<text>1_1_At the first God made the heaven and the earth.</text>
+					</verse>
+				</verses>
+			</chapter>
+		</chapters>
+	</book>
+	<book>
+		<number>4</number>
+		<chapters>
+			<chapter>
+				<number>1</number>
+				<verses>
+					<verse>
+						<number>1</number>
+
+						<text>1_1_At the first God made the heaven and the earth.</text>
+					</verse>
+				</verses>
+			</chapter>
+		</chapters>
+	</book>
+	<book>
+		<number>3</number>
+		<chapters>
+			<chapter>
+				<number>1</number>
+				<verses>
+					<verse>
+						<number>1</number>
+
+						<text>1_1_At the first God made the heaven and the earth.</text>
+					</verse>
+				</verses>
+			</chapter>
+		</chapters>
+	</book>
+
+</bible>
