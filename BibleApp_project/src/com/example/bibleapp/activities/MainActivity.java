@@ -1,4 +1,4 @@
-package com.example.bibleapp;
+package com.example.bibleapp.activities;
 
 import android.os.Bundle;
 import android.app.Activity;
@@ -11,9 +11,16 @@ public class MainActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 
-		Intent intent = new Intent(this, StartActivity.class);
+		Intent intent;
+
+		if (true) {
+			intent = new Intent(this, StartActivity.class);
+		} else {
+			intent = new Intent(this, StartActivity.class);
+		}
 
 		startActivity(intent);
+		finish();
 	}
 
 }

@@ -14,7 +14,7 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name="com.example.bibleapp.MainActivity"
+            android:name="com.example.bibleapp.activities.MainActivity"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -23,31 +23,31 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.example.bibleapp.TestamentActivity"
+            android:name="com.example.bibleapp.activities.TestamentActivity"
             android:label="@string/app_name" >
         </activity>
         <activity
-            android:name="com.example.bibleapp.BookmarksActivity"
+            android:name="com.example.bibleapp.activities.BookmarksActivity"
             android:label="@string/app_name" >
         </activity>
         <activity
-            android:name="com.example.bibleapp.SettingsActivity"
+            android:name="com.example.bibleapp.activities.SettingsActivity"
             android:label="@string/app_name" >
         </activity>
         <activity
-            android:name="com.example.bibleapp.SpecialVersesActivity"
+            android:name="com.example.bibleapp.activities.SpecialVersesActivity"
             android:label="@string/app_name" >
         </activity>
         <activity
-            android:name="com.example.bibleapp.StartActivity"
+            android:name="com.example.bibleapp.activities.StartActivity"
             android:label="@string/app_name" >
         </activity>
         <activity
-            android:name="com.example.bibleapp.BookActivity"
+            android:name="com.example.bibleapp.activities.BookActivity"
             android:label="@string/app_name" >
         </activity>
         <activity
-            android:name="com.example.bibleapp.ChapterActivity"
+            android:name="com.example.bibleapp.activities.ChapterActivity"
             android:label="@string/app_name" >
         </activity>
     </application>
