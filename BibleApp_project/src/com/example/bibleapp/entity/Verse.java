@@ -1,9 +1,13 @@
-package com.example.bibleapp;
+package com.example.bibleapp.entity;
 
 public class Verse {
 	
 	private int number;
 	private String text;
+	
+	public Verse() {
+		
+	}
 	
 	public Verse(int number, String text) {
 		super();

@@ -1,16 +1,18 @@
-package com.example.bibleapp;
+package com.example.bibleapp.entity;
+
+import java.util.List;
 
 public class Testament {
 
 	private int number;
 	private String title;
-	private Book[] partisions;
+	private List<Book> books;
 
-	public Testament(int number, String title, Book[] partisions) {
+	public Testament(int number, String title, List<Book> books) {
 		super();
 		this.number = number;
 		this.title = title;
-		this.partisions = partisions;
+		this.books = books;
 	}
 
 	public int getNumber() {
@@ -29,12 +31,12 @@ public class Testament {
 		this.title = title;
 	}
 
-	public Book[] getPartisions() {
-		return partisions;
+	public List<Book> getBooks() {
+		return books;
 	}
 
-	public void setPartisions(Book[] partisions) {
-		this.partisions = partisions;
+	public void setBooks(List<Book> books) {
+		this.books = books;
 	}
 
 }
