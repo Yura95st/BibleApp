@@ -4,14 +4,8 @@ import java.util.List;
 
 public class Chapter
 {
-
 	private int number;
 	private List<Verse> verses;
-
-	public Chapter()
-	{
-
-	}
 
 	public Chapter(int nubmer, List<Verse> verses)
 	{
@@ -25,19 +19,9 @@ public class Chapter
 		return number;
 	}
 
-	public void setNumber(int nubmer)
-	{
-		this.number = nubmer;
-	}
-
 	public List<Verse> getVerses()
 	{
 		return verses;
-	}
-
-	public void setVerses(List<Verse> verses)
-	{
-		this.verses = verses;
 	}
 
 	public Verse getVerse(int verseNumber)

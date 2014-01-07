@@ -1,34 +1,25 @@
 package com.example.bibleapp.entity;
 
-public class Verse {
-	
+public class Verse
+{
 	private int number;
 	private String text;
-	
-	public Verse() {
-		
-	}
-	
-	public Verse(int number, String text) {
+
+	public Verse(int number, String text)
+	{
 		super();
 		this.number = number;
 		this.text = text;
 	}
 
-	public int getNumber() {
+	public int getNumber()
+	{
 		return number;
 	}
 
-	public void setNumber(int number) {
-		this.number = number;
-	}
-
-	public String getText() {
+	public String getText()
+	{
 		return text;
 	}
 
-	public void setText(String text) {
-		this.text = text;
-	}
-	
 }
