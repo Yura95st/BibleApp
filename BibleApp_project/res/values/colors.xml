@@ -4,5 +4,6 @@
     <color name="verseNumberTextView_textColor">#000000</color>
     <color name="verseTextTextView_textColor">#000000</color>
     <color name="verseListView_divider">#FFFFFF</color>
+    <color name="verseListView_background">#FFFFFF</color>
 
 </resources>
