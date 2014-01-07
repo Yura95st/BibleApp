@@ -3,29 +3,37 @@ package com.example.bibleapp;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.util.ArrayList;
 import java.util.List;
 
 import org.xmlpull.v1.XmlPullParserException;
 
-import android.content.Context;
+import android.app.Activity;
 import android.content.res.AssetManager;
 import android.os.AsyncTask;
+import android.widget.ListView;
 
 import com.example.bibleapp.entity.Book;
+import com.example.bibleapp.entity.Chapter;
+import com.example.bibleapp.entity.Verse;
 
 public class BibleParseTask extends AsyncTask<String, String, String>
 {
 	private BibleParserHandler bibleParser = new BibleParserHandler();
 
-	private Context context;
+	private Activity activity;
 	private String fileName = "bible.xml";
 	private int bookNumber = BibleParserHandler.READ_ALL_BOOKS;
 	private int chapterNumber = BibleParserHandler.READ_ALL_CHAPTERS;
 	private int verseNumber = BibleParserHandler.READ_ALL_VERSES;
 
-	public BibleParseTask(Context context)
+	private ListView listView;
+	private int layout_verseListViewItem;
+	private int id_verseItemTextView;
+
+	public BibleParseTask(Activity activity)
 	{
-		this.context = context;
+		this.activity = activity;
 	}
 
 	@Override
@@ -56,28 +64,47 @@ public class BibleParseTask extends AsyncTask<String, String, String>
 		this.verseNumber = verseNumber;
 	}
 
+	public void setListView(ListView listView)
+	{
+		this.listView = listView;
+	}
+
+	public void setLayout_verseListViewItem(int layout_verseListViewItem)
+	{
+		this.layout_verseListViewItem = layout_verseListViewItem;
+	}
+
+	public void setId_verseItemTextView(int id_verseItemTextView)
+	{
+		this.id_verseItemTextView = id_verseItemTextView;
+	}
+
 	private void updateListView()
 	{
-		// List<Book> books = getBooks();
-		//
-		// try {
-		// for (Book book : books) {
-		// if (book.getNumber() == bookNumber) {
-		// Chapter chapter = book.getChapter(chapterNumber);
-		//
-		// for (Verse verse : chapter.getVerses()) {
-		// verses.add(verse.getText());
-		// }
-		// }
-		// }
-		// }
-		// finally {
-		// }
+		List<Verse> verses = new ArrayList<Verse>();
+		List<Book> books = getBooks();
+
+		try {
+			for (Book book : books) {
+				if (book.getNumber() == bookNumber) {
+					Chapter chapter = book.getChapter(chapterNumber);
+					if (chapter != null) {
+						verses = chapter.getVerses();
+					}
+				}
+			}
+		}
+		finally {
+		}
+
+		VerseArrayAdapter adapter = new VerseArrayAdapter(activity, verses);
+
+		listView.setAdapter(adapter);
 	}
 
 	private void parseBible()
 	{
-		AssetManager manager = this.context.getAssets();
+		AssetManager manager = activity.getApplicationContext().getAssets();
 		InputStream inputStream;
 
 		try {

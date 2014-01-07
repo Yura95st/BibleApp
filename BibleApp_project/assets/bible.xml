@@ -2,24 +2,42 @@
 <bible>
 	<book>
 		<number>1</number>
+		<title>Title</title>
 		<chapters>
 			<chapter>
 				<number>1</number>
 				<verses>
 					<verse>
 						<number>1</number>
-
-						<text>1_1_At the first God made the heaven and the earth.</text>
+						<text>At the first God made the heaven and the earth.</text>
 					</verse>
 					<verse>
 						<number>2</number>
-
-						<text>1_1_At the first God made the heaven and the earth.</text>
+						<text>And the earth was waste and without form; and it was dark on the face of the deep: and the Spirit of God was moving on the face of the waters.</text>
 					</verse>
 					<verse>
 						<number>3</number>
-
-						<text>1_1_At the first God made the heaven and the earth.</text>
+						<text>And God said, Let there be light: and there was light.</text>
+					</verse>
+					<verse>
+						<number>4</number>
+						<text>And the earth was waste and without form; and it was dark on the face of the deep: and the Spirit of God was moving on the face of the waters.</text>
+					</verse>
+					<verse>
+						<number>5</number>
+						<text>And the earth was waste and without form; and it was dark on the face of the deep: and the Spirit of God was moving on the face of the waters.</text>
+					</verse>
+					<verse>
+						<number>6</number>
+						<text>And the earth was waste and without form; and it was dark on the face of the deep: and the Spirit of God was moving on the face of the waters.</text>
+					</verse>
+					<verse>
+						<number>7</number>
+						<text>And the earth was waste and without form; and it was dark on the face of the deep: and the Spirit of God was moving on the face of the waters.</text>
+					</verse>
+					<verse>
+						<number>10</number>
+						<text>And the earth was waste and without form; and it was dark on the face of the deep: and the Spirit of God was moving on the face of the waters.</text>
 					</verse>
 				</verses>
 			</chapter>
@@ -35,50 +53,4 @@
 			</chapter>
 		</chapters>
 	</book>
-	<book>
-		<number>2</number>
-		<chapters>
-			<chapter>
-				<number>1</number>
-				<verses>
-					<verse>
-						<number>1</number>
-
-						<text>1_1_At the first God made the heaven and the earth.</text>
-					</verse>
-				</verses>
-			</chapter>
-		</chapters>
-	</book>
-	<book>
-		<number>4</number>
-		<chapters>
-			<chapter>
-				<number>1</number>
-				<verses>
-					<verse>
-						<number>1</number>
-
-						<text>1_1_At the first God made the heaven and the earth.</text>
-					</verse>
-				</verses>
-			</chapter>
-		</chapters>
-	</book>
-	<book>
-		<number>3</number>
-		<chapters>
-			<chapter>
-				<number>1</number>
-				<verses>
-					<verse>
-						<number>1</number>
-
-						<text>1_1_At the first God made the heaven and the earth.</text>
-					</verse>
-				</verses>
-			</chapter>
-		</chapters>
-	</book>
-
 </bible>

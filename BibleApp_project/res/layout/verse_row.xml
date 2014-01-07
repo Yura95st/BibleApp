@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/RelativeLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal" >
+
+    <TextView
+        android:id="@+id/verseNumberTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/verseTextTextView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="@dimen/verseNumberTextView_marginBottom"
+        android:layout_marginLeft="@dimen/verseNumberTextView_marginLeft"
+        android:layout_marginRight="@dimen/verseNumberTextView_marginRight"
+        android:text="1"
+        android:textColor="@color/verseNumberTextView_textColor"
+        android:textSize="@dimen/verseNumberTextView_textSize"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/verseTextTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/verseNumberTextView"
+        android:text="dfasdfasfdfasdfasfdfasdfasfdfasdfasfdfasdfasfdfasdfasfdfasdfasfdfasdfasf
+        dfasdfasfdfasdfasfdfasdfasfdfasdfasfdfasdfasfdfasdfasfdfasdfasf
+        dfasdfasfdfasdfasfdfasdfasfdfasdfasf"
+        android:textColor="@color/verseTextTextView_textColor"
+        android:textSize="@dimen/verseTextTextView_textSize" />
+
+</RelativeLayout>

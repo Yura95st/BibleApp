@@ -20,7 +20,7 @@ public class BookActivity extends Activity
 {
 	public final static String EXTRA_CHAPTER_NUMBER = "com.example.bibleapp.CHAPTER_NUMBER";
 
-	private ListView chapterListView;
+	private ListView chaptersListView;
 	private List<String> chapters = new ArrayList<String>();
 	private int testamentNumber;
 	private int bookNumber;
@@ -39,13 +39,13 @@ public class BookActivity extends Activity
 		testamentNumber = getTestamentNumberFromIntent();
 		bookNumber = getBookNumberFromIntent();
 		chapters = getChapters();
-		chapterListView = (ListView) findViewById(id_chapterListView);
+		chaptersListView = (ListView) findViewById(id_chapterListView);
 
 		ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
 				layout_chapterListViewItem, id_chapterItemTextView, chapters);
 
-		chapterListView.setAdapter(adapter);
-		chapterListView.setOnItemClickListener(chapterListItemClickListener);
+		chaptersListView.setAdapter(adapter);
+		chaptersListView.setOnItemClickListener(chapterListItemClickListener);
 	}
 
 	private int getTestamentNumberFromIntent()
