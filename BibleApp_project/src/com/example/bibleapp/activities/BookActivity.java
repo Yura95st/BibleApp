@@ -15,6 +15,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 import com.example.bibleapp.R;
+import com.example.bibleapp.ResourceGetter;
 
 public class BookActivity extends Activity
 {
@@ -62,33 +63,13 @@ public class BookActivity extends Activity
 		return intent.getIntExtra(TestamentActivity.EXTRA_BOOK_NUMBER, 0);
 	}
 
-	private int[] getChaptersCountFromResources()
-	{
-		int[] chapters_count = null;
-
-		Resources res = getResources();
-
-		// get chapters_count array from resources depends on testament number
-		switch (this.testamentNumber)
-		{
-			case 0:
-				chapters_count = res
-						.getIntArray(R.array.chapters_count_old_testament);
-				break;
-			case 1:
-				chapters_count = res
-						.getIntArray(R.array.chapters_count_new_testament);
-				break;
-		}
-
-		return chapters_count;
-	}
-
 	private List<String> getChapters()
 	{
 		List<String> chapters = new ArrayList<String>();
+		Resources res = getResources();
 
-		int[] chapters_count = getChaptersCountFromResources();
+		int[] chapters_count = ResourceGetter.getChaptersCountArray(res,
+				testamentNumber);
 
 		// fill the chapter's names array from "Chapter 1" to
 		// "Chapter " + chapters_count[this.bookNumber]

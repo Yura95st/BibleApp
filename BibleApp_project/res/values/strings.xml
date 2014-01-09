@@ -1,12 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">BibleApp</string>
-    <string name="action_settings">Settings</string>
+    <string name="app_name">BibleApp</string> 
     <string name="old_testament_button">Old Testament</string>
     <string name="new_testament_button">New Testament</string>
     <string name="special_verser_button">Special verses</string>
     <string name="bookmarks_button">Bookmarks</string>
     <string name="settings_button">Settings</string>
+    
+    <string name="action_addToBookmarks">Add to Bookmarks</string>
+    <string name="action_nextChapter">Next Chapter</string>
+    <string name="action_bookName">BookName</string>
+    <string name="action_prevChapter">Previous Chapter</string>
+    <string name="action_textStyleSettings">TextStyle settings</string>
+    <string name="action_share">Share</string>
+    
+    <string name="action_settings">Settings</string>
+    <string name="action_about">About</string>
 
 </resources>

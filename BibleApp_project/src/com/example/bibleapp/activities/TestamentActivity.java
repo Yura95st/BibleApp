@@ -12,6 +12,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 import com.example.bibleapp.R;
+import com.example.bibleapp.ResourceGetter;
 
 public class TestamentActivity extends Activity
 {
@@ -32,8 +33,10 @@ public class TestamentActivity extends Activity
 		super.onCreate(savedInstanceState);
 		setContentView(layout_testamentActivity);
 
+		Resources res = getResources();
+
 		testamentNumber = getTestamentNumberFromIntent();
-		books = getBooksFromArray();
+		books = ResourceGetter.getBooksArray(res, testamentNumber);
 		bookListView = (ListView) findViewById(id_bookListView);
 
 		ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
@@ -48,24 +51,6 @@ public class TestamentActivity extends Activity
 		Intent intent = getIntent();
 
 		return intent.getIntExtra(StartActivity.EXTRA_TESTAMENT_NUMBER, 0);
-	}
-
-	private String[] getBooksFromArray()
-	{
-		String[] books = null;
-
-		Resources res = getResources();
-
-		switch (this.testamentNumber)
-		{
-			case 0:
-				books = res.getStringArray(R.array.books_old_testament);
-				break;
-			case 1:
-				books = res.getStringArray(R.array.books_new_testament);
-				break;
-		}
-		return books;
 	}
 
 	private OnItemClickListener bookListItemClickListener = new OnItemClickListener()

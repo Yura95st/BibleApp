@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/action_addToBookmarks"
+        android:icon="@drawable/ic_action_not_important"
+        android:showAsAction="always"
+        android:title="@string/action_addToBookmarks"/>
+    <item
+        android:id="@+id/action_prevChapter"
+        android:icon="@drawable/ic_action_previous_item"
+        android:showAsAction="always"
+        android:title="@string/action_prevChapter"/>
+    <item
+        android:id="@+id/action_bookName"
+        android:showAsAction="always|withText"
+        android:title="@string/action_bookName"/>
+    <item
+        android:id="@+id/action_nextChapter"
+        android:icon="@drawable/ic_action_next_item"
+        android:showAsAction="always"
+        android:title="@string/action_nextChapter"/>
+    <item
+        android:id="@+id/action_textStyleSettings"
+        android:icon="@drawable/ic_launcher"
+        android:showAsAction="always"
+        android:title="@string/action_textStyleSettings"/>
+    <item
+        android:id="@+id/action_share"
+        android:icon="@drawable/ic_action_share"
+        android:showAsAction="always"
+        android:title="@string/action_share"/>
+    <item
+        android:id="@+id/action_settings"
+        android:orderInCategory="100"
+        android:showAsAction="never"
+        android:title="@string/action_settings"/>
+    <item
+        android:id="@+id/action_about"
+        android:orderInCategory="100"
+        android:showAsAction="never"
+        android:title="@string/action_about"/>
+
+</menu>
