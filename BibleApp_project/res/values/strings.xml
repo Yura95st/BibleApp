@@ -8,5 +8,10 @@
     <string name="special_verser_button">Special verses</string>
     <string name="bookmarks_button">Bookmarks</string>
     <string name="settings_button">Settings</string>
+    
+    <string name="action_addToBookmarks">Add to Bookmarks</string>
+    <string name="action_nextChapter">Next Chapter</string>
+    <string name="action_prevChapter">Previous Chapter</string>
+    <string name="action_bookName">BookName</string>
 
 </resources>

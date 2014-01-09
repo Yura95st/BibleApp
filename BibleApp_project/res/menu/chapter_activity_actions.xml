@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" 
+      xmlns:yourapp="http://schemas.android.com/apk/res-auto" >
+    
+    <item android:id="@+id/action_addToBookmarks"
+          android:icon="@android:drawable/star_off"
+          android:title="@string/action_addToBookmarks"
+          yourapp:showAsAction="ifRoom" />
+    
+    <item android:id="@+id/action_nextChapter"
+          android:icon="@android:drawable/ic_media_next"
+          android:title="@string/action_nextChapter"
+          yourapp:showAsAction="ifRoom|always" />
+    
+    <item android:id="@+id/action_bookName"
+          android:title="@string/action_bookName"
+          yourapp:showAsAction="ifRoom|always|withText" />
+    
+    <item android:id="@+id/action_prevChapter"
+          android:icon="@android:drawable/ic_media_previous"
+          android:title="@string/action_prevChapter"
+          yourapp:showAsAction="ifRoom|always|withText" />
+</menu>
