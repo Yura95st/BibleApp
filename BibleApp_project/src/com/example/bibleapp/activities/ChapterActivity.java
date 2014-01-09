@@ -3,11 +3,10 @@ package com.example.bibleapp.activities;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuInflater;
 import android.widget.ListView;
 
 import com.example.bibleapp.BibleParseTask;
+import com.example.bibleapp.R;
 
 public class ChapterActivity extends Activity
 {
@@ -18,10 +17,10 @@ public class ChapterActivity extends Activity
 	private int bookNumber;
 	private int chapterNumber;
 
-	private int layout_chapterActivity = 0;// R.layout.activity_chapter;
-	private int id_verseListView = 0;// R.id.verseListView;
-	private int layout_verseListViewItem = 0;// R.layout.verse_row;
-	private int id_verseItemTextView = 0;// R.id.bookItemTextView;
+	private int layout_chapterActivity = R.layout.activity_chapter;
+	private int id_verseListView = R.id.verseListView;
+	private int layout_verseListViewItem = R.layout.verse_row;
+	private int id_verseItemTextView = R.id.bookItemTextView;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState)
@@ -70,14 +69,5 @@ public class ChapterActivity extends Activity
 		bibleParseTask.setId_verseItemTextView(id_verseItemTextView);
 
 		bibleParseTask.execute();
-	}
-
-	@Override
-	public boolean onCreateOptionsMenu(Menu menu)
-	{
-		// Inflate the menu items for use in the action bar
-		MenuInflater inflater = getMenuInflater();
-		// inflater.inflate(R.menu.chapter_activity_actions, menu);
-		return super.onCreateOptionsMenu(menu);
 	}
 }
