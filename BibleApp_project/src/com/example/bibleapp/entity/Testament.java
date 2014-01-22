@@ -10,7 +10,6 @@ public class Testament
 
 	public Testament(int number, String title, List<Book> books)
 	{
-		super();
 		this.number = number;
 		this.title = title;
 		this.books = books;
@@ -29,5 +28,20 @@ public class Testament
 	public List<Book> getBooks()
 	{
 		return books;
+	}
+
+	public Book getBook(int bookNumber)
+	{
+		for (Book book : books) {
+			if (book.getNumber() == bookNumber) {
+				return book;
+			}
+		}
+		return null;
+	}
+
+	public int getBooksCount()
+	{
+		return books.size();
 	}
 }

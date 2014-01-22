@@ -7,7 +7,6 @@ public class Verse
 
 	public Verse(int number, String text)
 	{
-		super();
 		this.number = number;
 		this.text = text;
 	}

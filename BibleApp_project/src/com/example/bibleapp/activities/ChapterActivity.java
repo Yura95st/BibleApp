@@ -14,6 +14,7 @@ import android.widget.ListView;
 import com.example.bibleapp.BibleParseTask;
 import com.example.bibleapp.R;
 import com.example.bibleapp.ResourceGetter;
+import com.example.bibleapp.history.HistoryProcessor;
 
 public class ChapterActivity extends Activity
 {
@@ -31,6 +32,8 @@ public class ChapterActivity extends Activity
 	private int layout_verseListViewItem = R.layout.verse_row;
 	private int id_verseItemTextView = R.id.bookItemTextView;
 
+	private HistoryProcessor historyProcessor;
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState)
 	{
@@ -45,7 +48,13 @@ public class ChapterActivity extends Activity
 
 		verseListView = (ListView) findViewById(id_verseListView);
 
-		fillVersesListView();
+		setupVersesListView();
+
+		// write to the history
+		historyProcessor = new HistoryProcessor(this.getApplicationContext());
+		historyProcessor.put(bookNumber, chapterNumber);
+
+		// List<History> items = historyProcessor.getAll();
 	}
 
 	private int getTestamentNumberFromIntent()
@@ -69,7 +78,7 @@ public class ChapterActivity extends Activity
 		return intent.getIntExtra(BookActivity.EXTRA_CHAPTER_NUMBER, 0);
 	}
 
-	private void fillVersesListView()
+	private void setupVersesListView()
 	{
 		BibleParseTask bibleParseTask = new BibleParseTask(this);
 
@@ -88,24 +97,18 @@ public class ChapterActivity extends Activity
 		// Inflate the menu items for use in the action bar
 		MenuInflater inflater = getMenuInflater();
 		inflater.inflate(R.menu.chapter_activity_actions, menu);
-
 		return super.onCreateOptionsMenu(menu);
 	}
 
 	@Override
 	public boolean onPrepareOptionsMenu(Menu menu)
 	{
-		setActionBookNameButton(menu);
-		setActionPrevButton(menu);
+		setupActionBookNameButton(menu);
+		setupActionPrevButton(menu);
 		return super.onPrepareOptionsMenu(menu);
 	}
 
-	private void setActionPrevButton(Menu menu)
-	{
-		MenuItem menuItem = menu.findItem(R.id.action_prevChapter);
-		menuItem.setEnabled(chapterNumber != getPreviousChapter());
-	}
-
+	@Override
 	public boolean onOptionsItemSelected(MenuItem item)
 	{
 		int itemId = item.getItemId();
@@ -127,6 +130,12 @@ public class ChapterActivity extends Activity
 
 		}
 		return super.onOptionsItemSelected(item);
+	}
+
+	private void setupActionPrevButton(Menu menu)
+	{
+		MenuItem menuItem = menu.findItem(R.id.action_prevChapter);
+		menuItem.setEnabled(chapterNumber != getPreviousChapter());
 	}
 
 	private void setupActionBar()
@@ -155,7 +164,7 @@ public class ChapterActivity extends Activity
 		startActivity(intent);
 	}
 
-	private void setActionBookNameButton(Menu menu)
+	private void setupActionBookNameButton(Menu menu)
 	{
 		MenuItem menuItem = menu.findItem(R.id.action_bookName);
 		menuItem.setTitle(getCurrentBookTitle());
@@ -257,7 +266,7 @@ public class ChapterActivity extends Activity
 		this.bookNumber = bookNumber;
 		this.chapterNumber = chapterNumber;
 
-		fillVersesListView();
+		setupVersesListView();
 		invalidateOptionsMenu();
 	}
 

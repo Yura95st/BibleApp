@@ -9,7 +9,6 @@ public class Chapter
 
 	public Chapter(int nubmer, List<Verse> verses)
 	{
-		super();
 		this.number = nubmer;
 		this.verses = verses;
 	}
@@ -33,4 +32,10 @@ public class Chapter
 		}
 		return null;
 	}
+
+	public int getVersesCount()
+	{
+		return verses.size();
+	}
+
 }

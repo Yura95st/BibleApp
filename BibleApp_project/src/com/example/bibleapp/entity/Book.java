@@ -10,7 +10,6 @@ public class Book
 
 	public Book(int nubmer, String title, List<Chapter> chapters)
 	{
-		super();
 		this.number = nubmer;
 		this.title = title;
 		this.chapters = chapters;
@@ -39,5 +38,10 @@ public class Book
 			}
 		}
 		return null;
+	}
+
+	public int getChaptersCount()
+	{
+		return chapters.size();
 	}
 }
